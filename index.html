@@ -36,3 +36,196 @@
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartStore | بيتك الذكي بلمسة واحدة</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2 family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-light: #f8fafc; /* خلفية ناعمة مريحة جداً للعين */
+            --card-bg: #ffffff;
+            --primary: #00b4d8; /* أزرق سماوي مبهج ويفتح النفس */
+            --primary-dark: #0077b6;
+            --text-dark: #1e293b; /* رمادي داكن فخم بديل للأسود القاتم */
+            --text-muted: #64748b;
+            --success: #10b981; /* أخضر هادي للخصومات والثقة */
+            --paypal: #ffc439;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* النافبار والهيدر */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02), 0 2px 4px -1px rgba(0,0,0,0.01);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* خانة البحث الاحترافية */
+        .search-container {
+            flex: 1;
+            max-width: 450px;
+            position: relative;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 10px 45px 10px 15px;
+            border: 2px solid #e2e8f0;
+            border-radius: 30px;
+            font-size: 15px;
+            background-color: #f1f5f9;
+            transition: all 0.3s ease;
+            outline: none;
+        }
+
+        .search-input:focus {
+            border-color: var(--primary);
+            background-color: #fff;
+            box-shadow: 0 0 0 4px rgba(0, 180, 216, 0.1);
+        }
+
+        .search-icon {
+            position: absolute;
+            top: 50%;
+            right: 18px;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .cart-trigger {
+            background: rgba(0, 180, 216, 0.08);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            color: var(--primary-dark);
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.2s;
+        }
+
+        .cart-trigger:hover {
+            background: rgba(0, 180, 216, 0.15);
+        }
+
+        .cart-badge {
+            background-color: #ef4444;
+            color: white;
+            border-radius: 50%;
+            padding: 2px 8px;
+            font-size: 12px;
+        }
+
+        /* سكشن البانر الرئيسي الترحيبي */
+        .hero {
+            background: linear-gradient(135deg, #e0f7fa 0%, #fff 100%);
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            color: var(--text-muted);
+            font-size: 17px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* شبكة المنتجات */
+        .main-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .grid-title {
+            font-size: 24px;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .grid-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 4px;
+            background-color: var(--primary);
+            margin-top: 8px;
+            border-radius: 2px;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        /* كارت المنتج الراقي */
+        .product-card {
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .product
